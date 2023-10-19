@@ -35,7 +35,7 @@ html {
     list-style: circle;
  }
 
- .header__menu-link{
+ .header__menu-link {
     text-underline-offset: 4px;
  }
 
@@ -52,12 +52,12 @@ html {
 
   /* Логотип: */
 
-.header__logo{
+.header__logo {
     display: block;
     width: 148px;
 }
 
-.header__logo-image{
+.header__logo-image {
     width: 100%;
 }
 
@@ -92,7 +92,7 @@ html {
 
 
 
-.title__cover{
+.title__cover {
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -110,19 +110,19 @@ html {
   display: block;
 }
 
-.text-center{
+.text-center {
   text-align: center;
 }
 
-.text-right{
+.text-right {
   text-align: right;
 }
 
-.letter-spacing{
+.letter-spacing {
   letter-spacing: 60px;
 }
 
-.no-letter-spacing{
+.no-letter-spacing {
   letter-spacing: 0px;
 }
 
@@ -162,7 +162,7 @@ html {
 
 /* _______lots _______ */
 
-.lots{
+.lots {
   padding: 180px 50px;
 }
 
@@ -229,7 +229,7 @@ text-transform: uppercase;
   background-size: cover;
 }
 
-.card_type_book  {
+.card_type_book {
   background-image: url(/images/card-lot-02.jpg);
   background-repeat: no-repeat;
   background-position: center;
@@ -322,7 +322,7 @@ text-transform: uppercase;
   text-decoration: none;
 }
 
-.footer__social-list{
+.footer__social-list {
   display: flex;
   flex-direction: row;
   list-style: none;
