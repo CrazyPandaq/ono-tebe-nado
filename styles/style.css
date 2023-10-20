@@ -4,11 +4,11 @@
   }*/
 
 html {
-    scroll-behavior:smooth;
+  scroll-behavior: smooth;
 }
 
 .overlay {
-  background-color: rgb(0,0,0, 0.6);
+  background-color: rgb(0, 0, 0, 0.6);
   width: 100%;
   height: 100%;
   position: absolute;
@@ -19,86 +19,88 @@ html {
 
 /*  _______________header_______________ */
 
-  .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 90px 50px 88px 50px;
-  }
+.header {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  padding: 94px 50px 95px 50px;
+}
 
-  /* Блок навигации: */
+/* Блок навигации: */
 
- .header__menu-list {
-    display: flex;
-    flex-direction: row;
-    gap: 32px;
-    list-style: circle;
- }
+.header__menu-list {
+  display: flex;
+  gap: 32.5px;
+  list-style: circle;
+  padding-left: 2px;
+}
 
- .header__menu-link {
-    text-underline-offset: 4px;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
- }
+/* Если сравнивать с макетом, то в нем кружки у списка в меню больше радиусом, чем у меня. Не нашел в документации как можно увеличить их в размере, при этом не трогая шрифт текста. Может есть какой-то лайфхак) */
 
+.header__menu-link {
+  text-underline-offset: 4px;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
 
 .header__menu-item_active {
   list-style: none;
- }
-
- .header__menu-item_active .header__menu-link {
-    text-decoration: none;
-    
 }
 
+.header__menu-item_active .header__menu-link {
+  text-decoration: none;
+}
 
-  /* Логотип: */
+/* Логотип: */
 
 .header__logo {
-    display: block;
-    width: 148px;
-    margin-right: 146px;
+  display: block;
+  width: 140px;
+  height: 105px;
+  justify-self: center;
+  align-self: center;
 }
 
 .header__logo-image {
-    width: 100%;
+  width: 100%;
+  height: 100%;
 }
 
-  /* Блок адресса: */
+/* Блок адресса: */
+
+.address {
+  display: block;
+  line-height: 1.35;
+  font-size: 18px;
+  font-style: normal;
+  max-width: 238px;
+}
 
 .header__address {
-    display: block;
-    line-height: 1.35;
-    font-size: 18px;
-    font-style: normal;
-    max-width: 238px;
+  justify-self: end;
 }
 
 .header__address-info {
-    text-underline-offset: 4.1px;
+  text-underline-offset: 4.1px;
 }
-
 
 /*  _______________Основной контент_______________ */
 
 /* _______cover _______ */
 
 .cover {
-    background-image: url(../images/cover.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    width: 100%;
-    position: relative;
-    z-index: 1;
+  background-image: url(../images/cover.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  position: relative;
+  z-index: 1;
 }
 
-
-
-
-.title__cover {
+.cover__title {
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -107,14 +109,17 @@ html {
   line-height: 1;
   letter-spacing: 30px;
   text-transform: uppercase;
-  color: #FFF;
+  color: #fff;
   padding: 165px 50px 0px 50px;
   z-index: 1;
 }
 
+.cover__title-text {
+  line-height: 1.15;
+}
+
 .accent-span {
   display: block;
-  height: 105px;
 }
 
 .text-center {
@@ -123,7 +128,6 @@ html {
 
 .text-right {
   text-align: right;
-  
 }
 
 .letter-spacing {
@@ -134,51 +138,50 @@ html {
   letter-spacing: 0px;
 }
 
-.description__cover {
+.cover__description {
   display: flex;
   gap: 78px;
   justify-content: end;
   align-items: center;
   z-index: 1;
-  padding: 135px 50px 50px 0px;
+  padding: 136px 50px 50px 0px;
 }
 
-.description__cover-text {
-  color: #FFF;
+.cover__description-text {
+  color: #fff;
   font-size: 22px;
   font-weight: 400;
   line-height: 28px;
   text-transform: uppercase;
-  word-spacing: 17.5px;
+  word-spacing: 18px;
 }
 
-.description__cover-button {
-  padding: 15px 32px;
+.cover__description-button {
+  padding: 10px 32px 12px 32px;
   background-color: transparent;
-  color: #FFF;
+  color: #fff;
   text-align: center;
-  font-family: Raleway;
+  font-family: "Raleway", Arial, sans-serif;
   font-size: 22px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
   text-transform: uppercase;
-  border: 1px solid #FFF;
+  border: 1px solid #fff;
   cursor: pointer;
-  height: 52px;
 }
 
 /* _______lots _______ */
 
 .lots {
-  padding: 180px 50px;
+  padding: 182px 50px;
 }
 
-.title__lots {
-padding: 0 0 27px 40px;
-font-size: 40px;
-font-weight: 700;
-text-transform: uppercase;
+.lots__title {
+  padding: 0 0 27px 40px;
+  font-size: 40px;
+  font-weight: 700;
+  text-transform: uppercase;
 }
 
 .lots__card-list {
@@ -187,13 +190,13 @@ text-transform: uppercase;
   flex-direction: row;
   gap: 25px;
   margin-bottom: 30px;
+  flex-wrap: wrap; /* Перенос блоков если добавлять новые */
 }
 
 .lots__card-list-item {
   flex-grow: 1;
   flex-basis: 430px;
   min-height: 450px;
-  
 }
 
 .card-link {
@@ -211,44 +214,38 @@ text-transform: uppercase;
   width: 100%;
   height: 100%;
   padding: 50px 40px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .card__title {
-  color: #FFF;
+  color: #fff;
   font-size: 22px;
   font-weight: 700;
-  line-height: 1.20;
+  line-height: 1.2;
   text-decoration-line: underline;
   text-transform: uppercase;
+  text-underline-offset: 3.5px;
 }
 
 .card__text {
   font-size: 20px;
   font-weight: 400;
-  line-height: 1.20;
-  color: #FFF;
+  line-height: 1.2;
+  color: #fff;
 }
-
 
 .card_type_film {
   background-image: url(../images/card-lot-01.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
 }
 
 .card_type_book {
   background-image: url(../images/card-lot-02.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
 }
 
 .card_type_picture {
   background-image: url(../images/card-lot-03.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
 }
 
 .lots__look-more-link {
@@ -256,9 +253,8 @@ text-transform: uppercase;
   margin-left: 40px;
   font-size: 20px;
   font-weight: 400;
-  text-underline-offset: 4.1px;
+  text-underline-offset: 4.5px;
 }
-
 
 /* _______about_______ */
 
@@ -269,18 +265,16 @@ text-transform: uppercase;
   padding: 0 50px 180px 50px;
 }
 
-
 .about__logo {
   background-color: #000;
   border-radius: 50%;
   margin: 0 95px;
-  padding: 63px 46px;
+  padding: 61px 46px;
 }
 
 .about__logo-image {
   width: 148px;
 }
-
 
 .about__title {
   text-transform: uppercase;
@@ -295,7 +289,7 @@ text-transform: uppercase;
   flex-direction: column;
   font-size: 20px;
   font-weight: 400;
-  gap: 25px;
+  gap: 26px;
   padding-top: 100px;
 }
 
@@ -305,9 +299,10 @@ text-transform: uppercase;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  padding: 5px 50px 90px 50px;
+  padding: 3px 50px 90px 50px;
   gap: 355px;
 }
+
 .footer__menu {
   display: flex;
   flex-direction: column;
@@ -318,6 +313,7 @@ text-transform: uppercase;
 .footer__menu-list {
   text-align: center;
   list-style: none;
+  padding-left: 5px;
 }
 
 .footer__menu-link {
@@ -326,7 +322,6 @@ text-transform: uppercase;
   text-underline-offset: 4px;
   font-size: 18px;
   font-weight: 400;
-
 }
 
 .footer__menu-list-item .footer__menu-link_active {
@@ -341,4 +336,5 @@ text-transform: uppercase;
   gap: 50px;
   width: 240px;
   flex: 0 0 auto;
+  padding-left: 2px;
 }
